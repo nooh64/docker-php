@@ -1,6 +1,4 @@
-FROM ubuntu
-MAINTAINER Nooh KVM <nooh64@gmail.com>
-RUN apt-get update -y
-RUN apt-get install -y apache2
-RUN apt-get install -y mysql-client mysql-server
-RUN apt-get install -y php7.0
+FROM httpd
+MAINTAINER Nooh KVM <nooh.km@pitsolutions.com>
+RUN apt-get update -y && apt-get install -y php7.0 && apt-get install -y libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json
+COPY ./typo3_src/ /usr/local/apache2/htdocs/

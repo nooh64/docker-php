@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+	<fe_users>
+		<uid>1</uid>
+		<pid>0</pid>
+		<username>usera</username>
+		<deleted>0</deleted>
+		<usergroup>1</usergroup>
+		<disable>0</disable>
+	</fe_users>
+	<fe_users>
+		<uid>2</uid>
+		<pid>0</pid>
+		<username>userb</username>
+		<deleted>0</deleted>
+		<usergroup>2</usergroup>
+		<disable>0</disable>
+	</fe_users>
+	<fe_users>
+		<uid>3</uid>
+		<pid>0</pid>
+		<username>administrator</username>
+		<deleted>0</deleted>
+		<usergroup>1,2</usergroup>
+		<disable>0</disable>
+		<tx_extbase_type>Tx_BlogExample_Domain_Model_Administrator</tx_extbase_type>
+	</fe_users>
+</dataset>

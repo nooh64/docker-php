@@ -1,0 +1,26 @@
+plugin.tx_form {
+    view {
+        templateRootPaths.5 = EXT:form/Resources/Private/Frontend/Templates/
+        partialRootPaths.5 = EXT:form/Resources/Private/Frontend/Partials/
+        layoutRootPaths.5 = EXT:form/Resources/Private/Frontend/Layouts/
+    }
+
+    mvc {
+        callDefaultActionIfActionCantBeResolved = 1
+    }
+
+    settings {
+        yamlConfigurations {
+            10 = EXT:form/Configuration/Yaml/BaseSetup.yaml
+            20 = EXT:form/Configuration/Yaml/FormEngineSetup.yaml
+        }
+    }
+}
+
+# Rendering of content elements
+lib.tx_form.contentElementRendering = RECORDS
+lib.tx_form.contentElementRendering {
+    tables = tt_content
+    source.current = 1
+    dontCheckPid = 1
+}
