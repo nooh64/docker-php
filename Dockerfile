@@ -23,6 +23,11 @@ RUN apt-get update && apt-get install -y \
     php-mysql \
     php-sqlite3 \
     php-zip \
+    php-gd \
+    php-soap \
+    php-gd \
+    php-gd \
+    php-gd \
     s3cmd \
     rsyslog-gnutls \
     && phpenmod mcrypt \
@@ -50,6 +55,9 @@ RUN ln -s $HTTPD_PREFIX/mods-available/expires.load $HTTPD_PREFIX/mods-enabled/e
 	&& ln -s $HTTPD_PREFIX/mods-available/rewrite.load $HTTPD_PREFIX/mods-enabled/rewrite.load
 
 COPY ./typo3_src/ /var/www/html/
+RUN rm /var/www/html/index.html
+RUN chmod 777 -R /var/www/
+
 EXPOSE 80
 
 # By default, simply start apache.
