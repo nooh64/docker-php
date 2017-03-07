@@ -57,6 +57,8 @@ RUN ln -s $HTTPD_PREFIX/mods-available/expires.load $HTTPD_PREFIX/mods-enabled/e
 COPY ./typo3_src/ /var/www/html/
 RUN rm /var/www/html/index.html
 RUN chmod 777 -R /var/www/
+RUN a2enmod rewrite
+ADD typo3.php.ini /etc/php/7.0/cli/conf.d/
 
 EXPOSE 80
 
