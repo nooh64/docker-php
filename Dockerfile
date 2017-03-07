@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Phillip Shipley <phillip_shipley@sil.org>
+MAINTAINER NOOH<nooh64@gmail.com>
 
 ENV REFRESHED_AT 2016-08-23
 ENV HTTPD_PREFIX /etc/apache2
