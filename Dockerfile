@@ -59,7 +59,7 @@ RUN rm /var/www/html/index.html
 RUN chmod 777 -R /var/www/
 RUN a2enmod rewrite
 ADD typo3.php.ini /etc/php/7.0/cli/conf.d/
-
+VOLUME ["/var/www/html/typo3conf", "/var/www/html/fileadmin", "/var/www/html/uploads"]
 EXPOSE 80
 
 # By default, simply start apache.
